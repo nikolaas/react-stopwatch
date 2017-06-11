@@ -49,6 +49,8 @@ export class Stopwatch extends React.Component {
         const {options, time} = this.state;
         const StopwatchView = getStopwatchView(options);
 
+        const started = this.state.phase === STOPWATCH_PHASES.STARTED;
+
         const canStart = this.state.phase === STOPWATCH_PHASES.INIT;
         const canPause = this.state.phase === STOPWATCH_PHASES.STARTED;
         const canResume = this.state.phase === STOPWATCH_PHASES.PAUSED;
@@ -58,7 +60,7 @@ export class Stopwatch extends React.Component {
         return (
             <div className={classNames("Stopwatch", className)}>
                 <div className="Stopwatch__options"/>
-                <StopwatchView className="Stopwatch__view" time={time}/>
+                <StopwatchView className="Stopwatch__view" time={time} started={started}/>
                 <div className="Stopwatch__controls">
                     <StopwatchControl className="Stopwatch__start" onClick={this.start} disabled={!canStart}>Start</StopwatchControl>
                     <StopwatchControl className="Stopwatch__pause" onClick={this.pause} disabled={!canPause}>Pause</StopwatchControl>

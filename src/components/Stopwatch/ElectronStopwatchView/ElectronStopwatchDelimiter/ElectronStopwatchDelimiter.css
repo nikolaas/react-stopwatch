@@ -5,10 +5,20 @@
 .ElectronStopwatchDelimiter__dot {
     width: 8px;
     height: 8px;
-    background-color: var(--active-color);
+    background-color: var(--default-color);
     margin-bottom: 10px;
 }
 
 .ElectronStopwatchDelimiter__dot:last-child {
     margin-bottom: 0;
+}
+
+.ElectronStopwatchDelimiter--started .ElectronStopwatchDelimiter__dot {
+    animation: ElectronStopwatchDelimiter-flash infinite 1s step-end;
+}
+
+@keyframes ElectronStopwatchDelimiter-flash {
+    0% { background-color: var(--active-color); }
+    50% { background-color: var(--default-color); }
+    100% { background-color: var(--active-color); }
 }

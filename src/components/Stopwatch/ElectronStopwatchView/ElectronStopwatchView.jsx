@@ -1,21 +1,28 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {ElectronStopwatchNumber} from './ElectronStopwatchNumber';
 import {ElectronStopwatchDelimiter} from './ElectronStopwatchDelimiter';
 import './ElectronStopwatchView.css';
 
-export const ElectronStopwatchView = ({className, time}) => {
+export const ElectronStopwatchView = ({className, time, started}) => {
     const minutes = normalizeTime(getMinutes(time));
     const seconds = normalizeTime(getSeconds(time));
     return (
         <div className={classNames("ElectronStopwatchView", className)}>
             <ElectronStopwatchNumber number={minutes[0]}/>
             <ElectronStopwatchNumber number={minutes[1]}/>
-            <ElectronStopwatchDelimiter/>
+            <ElectronStopwatchDelimiter started={started}/>
             <ElectronStopwatchNumber number={seconds[0]}/>
             <ElectronStopwatchNumber number={seconds[1]}/>
         </div>
     );
+};
+
+ElectronStopwatchView.propTypes = {
+    className: PropTypes.string,
+    time: PropTypes.number.isRequired,
+    started: PropTypes.bool.isRequired
 };
 
 function getMinutes(time) {
