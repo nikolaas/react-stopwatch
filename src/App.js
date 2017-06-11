@@ -1,5 +1,6 @@
 import React from 'react';
 import {Header} from './components/Header';
+import {LetStartedButton} from './components/LetStartedButton';
 import './App.css';
 
 class App extends React.Component {
@@ -7,9 +8,9 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header/>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className="App-content">
+            <LetStartedButton/>
+        </div>
       </div>
     );
   }

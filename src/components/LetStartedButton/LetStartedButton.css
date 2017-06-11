@@ -1,0 +1,16 @@
+.LetStartedButton {
+    font-size: 40px;
+    padding: 10px 20px;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease-out;
+    box-shadow: 1px 0px 12px -2px rgba(34,34,34, 0.5);
+}
+
+.LetStartedButton:hover {
+    box-shadow: 1px 0px 25px -2px rgba(34,34,34, 0.5);
+}

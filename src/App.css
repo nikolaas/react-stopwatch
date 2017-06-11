@@ -5,7 +5,9 @@
   align-items: stretch;
 }
 
-.App-intro {
-  text-align: center;
-  font-size: large;
+.App-content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
