@@ -1,0 +1,14 @@
+.ElectronStopwatchDelimiter {
+    padding: 10px;
+}
+
+.ElectronStopwatchDelimiter__dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--active-color);
+    margin-bottom: 10px;
+}
+
+.ElectronStopwatchDelimiter__dot:last-child {
+    margin-bottom: 0;
+}

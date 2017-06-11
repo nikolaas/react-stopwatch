@@ -1,0 +1,188 @@
+.ElectronStopwatchNumber {
+    --size: 40px;
+    --offset: 2px;
+    --shape-size: calc(var(--size) + var(--offset) * 2);
+    --thickness: 8px;
+    padding: 10px;
+}
+
+.ElectronStopwatchNumber__shape {
+    width: var(--shape-size);
+    height: calc(var(--shape-size) * 2);
+    position: relative;
+}
+
+.ElectronStopwatchNumber__part {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    z-index: 1;
+    --fill-color: var(--default-color);
+    background-color: var(--fill-color);
+}
+
+.ElectronStopwatchNumber__part.ElectronStopwatchNumber__part--active {
+    z-index: 10;
+    --fill-color: var(--active-color);
+}
+
+.ElectronStopwatchNumber__part-0 {
+    flex-direction: row;
+    width: var(--size);
+    height: var(--thickness);
+    top: 0;
+    left: 0;
+    transform: translateX(var(--offset));
+    clip-path: polygon(
+            4px 0px ,
+            36px 0px,
+            38px 2px,
+            32px 8px,
+            8px 8px,
+            2px 2px
+    );
+}
+
+.ElectronStopwatchNumber__part-1 {
+    flex-direction: column;
+    width: var(--thickness);
+    height: var(--size);
+    top: 0;
+    right: 0;
+    transform: translateY(var(--offset));
+    clip-path: polygon(
+            8px 4px,
+            8px 36px,
+            6px 38px,
+            0px 32px,
+            0px 8px,
+            6px 2px
+    );
+}
+
+.ElectronStopwatchNumber__part-2 {
+    width: var(--thickness);
+    height: var(--size);
+    top: 50%;
+    right: 0;
+    transform: translateY(var(--offset));
+    clip-path: polygon(
+            8px 4px,
+            8px 36px,
+            6px 38px,
+            0px 32px,
+            0px 8px,
+            6px 2px
+    );
+}
+
+.ElectronStopwatchNumber__part-3 {
+    flex-direction: row;
+    width: var(--size);
+    height: var(--thickness);
+    bottom: 0;
+    left: 0;
+    transform: translateX(var(--offset));
+    clip-path: polygon(
+            4px 8px ,
+            36px 8px,
+            38px 6px,
+            32px 0px,
+            8px 0px,
+            2px 6px
+    );
+}
+
+.ElectronStopwatchNumber__part-4 {
+    width: var(--thickness);
+    height: var(--size);
+    top: 50%;
+    left: 0;
+    transform: translateY(var(--offset));
+    clip-path: polygon(
+            0px 4px,
+            0px 36px,
+            2px 38px,
+            8px 32px,
+            8px 8px,
+            2px 2px
+    );
+}
+
+.ElectronStopwatchNumber__part-5 {
+    width: var(--thickness);
+    height: var(--size);
+    top: 0;
+    left: 0;
+    transform: translateY(var(--offset));
+    clip-path: polygon(
+            0px 4px,
+            0px 36px,
+            2px 38px,
+            8px 32px,
+            8px 8px,
+            2px 2px
+    );
+}
+
+.ElectronStopwatchNumber__part-6 {
+    flex-direction: row;
+    width: var(--size);
+    height: var(--thickness);
+    top: 50%;
+    left: 0;
+    transform: translate(var(--offset), -50%);
+    clip-path: polygon(
+            6px 0px,
+            34px 0px,
+            38px 4px,
+            34px 8px,
+            6px 8px,
+            2px 4px
+    );
+}
+
+.ElectronStopwatchNumber--without-center-line .ElectronStopwatchNumber__part-1 {
+    clip-path: polygon(
+            8px 4px,
+            8px 38px,
+            6px 40px,
+            0px 34px,
+            0px 8px,
+            6px 2px
+    );
+}
+
+.ElectronStopwatchNumber--without-center-line .ElectronStopwatchNumber__part-2 {
+    clip-path: polygon(
+            8px 2px,
+            8px 36px,
+            6px 38px,
+            0px 32px,
+            0px 6px,
+            6px 0px
+    );
+}
+
+.ElectronStopwatchNumber--without-center-line .ElectronStopwatchNumber__part-4 {
+    clip-path: polygon(
+            0px 2px,
+            0px 36px,
+            2px 38px,
+            8px 32px,
+            8px 6px,
+            2px 0px
+    );
+}
+
+.ElectronStopwatchNumber--without-center-line .ElectronStopwatchNumber__part-5 {
+    clip-path: polygon(
+            0px 4px,
+            0px 38px,
+            2px 40px,
+            8px 34px,
+            8px 8px,
+            2px 2px
+    );
+}

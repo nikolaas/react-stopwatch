@@ -1,0 +1,8 @@
+.ElectronStopwatchView {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    --default-color: rgba(34,34,34, 0.05);
+    --active-color: rgb(34,34,34);
+}
