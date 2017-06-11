@@ -13,13 +13,13 @@
 
 .Stopwatch__controls {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     margin: 50px;
 }
 
 .Stopwatch__control {
     padding: 10px 40px;
-    margin-right: 100px;
+    margin-right: 10px;
     cursor: pointer;
 }
 
