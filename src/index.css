@@ -1,5 +1,18 @@
+html {
+  height: 100%;
+}
+
 body {
+  min-height: 100%;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
   font-family: sans-serif;
+}
+
+.Root {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
