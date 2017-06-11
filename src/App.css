@@ -5,9 +5,12 @@
   align-items: stretch;
 }
 
-.App-content {
+.App__body {
   flex-grow: 1;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: stretch;
+}
+
+.App__content {
+  flex-grow: 1;
 }

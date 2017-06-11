@@ -1,4 +1,10 @@
-.LetStartedButton {
+.LetStarted {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.LetStarted__button {
     font-size: 40px;
     padding: 10px 20px;
     background-color: #222;
@@ -11,6 +17,6 @@
     box-shadow: 1px 0px 12px -2px rgba(34,34,34, 0.5);
 }
 
-.LetStartedButton:hover {
+.LetStarted__button:hover {
     box-shadow: 1px 0px 25px -2px rgba(34,34,34, 0.5);
 }
