@@ -23,6 +23,10 @@
     cursor: pointer;
 }
 
+.Stopwatch__control:disabled {
+    cursor: default;
+}
+
 .Stopwatch__control:last-child {
     margin-right: 0;
 }
