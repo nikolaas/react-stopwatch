@@ -2,11 +2,11 @@ import React from 'react';
 import './Header.css';
 import logo from './logo.svg';
 
-export const Header = (props) => {
+export const Header = () => {
     return (
         <div className="Header">
-            <img src={logo} className="Header-logo" alt="logo" />
-            <h2>React Stopwatch</h2>
+            <img className="Header-logo" src={logo} alt="logo" />
+            <h2 className="Header-title">React Stopwatch</h2>
         </div>
     );
 };
